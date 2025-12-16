@@ -1,0 +1,166 @@
+:root {
+  --innova-primary: #0b3c5d;
+  --innova-secondary: #f4f6f9;
+  --innova-accent: #ffb347;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+/* ============================================
+   HERO SECTION — Fondo degradado + texto justificado
+   ============================================ */
+
+   .hero-section {
+    min-height: 80vh;
+    background: linear-gradient(
+      135deg,
+      #062235 0%,
+      #0b3c5d 40%,
+      #0f4f78 75%,
+      #1674a3 100%
+    );
+    color: #fff;
+    display: flex;
+    align-items: center;
+    padding-top: 6rem;
+    padding-bottom: 4rem;
+  }
+  
+  /* Sacamos shapes amarillos */
+  .hero-bg-shape-1,
+  .hero-bg-shape-2 {
+    display: none;
+  }
+  
+  /* Justificación del subtítulo y párrafo */
+  .hero-subtitle {
+    font-size: 1.1rem;
+    max-width: 620px;
+    text-align: justify;
+    line-height: 1.55;
+    opacity: 0.95;
+  }
+  
+  /* Título */
+  .hero-title {
+    font-size: clamp(2rem, 3vw, 3rem);
+    font-weight: 700;
+    line-height: 1.2;
+  }
+  
+  /* Badge superior */
+  .hero-badge {
+    background-color: rgba(255, 255, 255, 0.12);
+    border-radius: 999px;
+    padding: 0.35rem 1rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+  }
+  
+  /* Imagen del hero */
+  .hero-image-main img {
+    border-radius: 1.5rem;
+  }
+  
+  /* Ajuste más suave en la tarjeta flotante */
+  .hero-info-card {
+    background: rgba(5, 15, 30, 0.85);
+    backdrop-filter: blur(8px);
+  }
+  
+  /* Badge flotante */
+  .hero-badge-floating {
+    background: rgba(5, 15, 30, 0.85);
+  }
+  
+  /* Meta */
+  .hero-meta-label {
+    font-size: 0.85rem;
+    font-weight: 600;
+  }
+  
+  .hero-meta-text {
+    font-size: 0.8rem;
+    opacity: 0.9;
+  }
+  
+  /* Mejora de responsividad */
+  @media (max-width: 991px) {
+    .hero-subtitle {
+      text-align: left; /* Evita bloques muy anchos justificados en móvil */
+    }
+  }
+  
+
+section {
+  scroll-margin-top: 75px;
+}
+
+.section-title {
+  font-weight: 700;
+  color: var(--innova-primary);
+}
+
+.section-subtitle {
+  color: #6c757d;
+  max-width: 720px;
+}
+
+.bg-soft {
+  background-color: var(--innova-secondary);
+}
+
+.service-card {
+  border: 1px solid rgba(11, 60, 93, 0.08);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  background-color: #fff;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.04);
+}
+
+.service-card h5 {
+  color: var(--innova-primary);
+  font-weight: 600;
+}
+
+.service-chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.7rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  background-color: rgba(11, 60, 93, 0.08);
+  color: var(--innova-primary);
+  margin-bottom: 0.75rem;
+}
+
+.step-badge {
+  width: 36px;
+  height: 36px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--innova-primary);
+  color: #fff;
+  font-weight: 600;
+  margin-right: 0.75rem;
+}
+
+.contact-card {
+  border-radius: 1.25rem;
+  border: 1px solid rgba(11, 60, 93, 0.08);
+  background-color: #fff;
+  padding: 2rem;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
+}
+
+.contact-email {
+  font-weight: 600;
+  color: var(--innova-primary);
+}

@@ -1,0 +1,305 @@
+/* ----- HERO BACKGROUND SHAPES ----- */
+
+.hero-section {
+    padding-bottom: 6rem; /* espacio para la tarjeta */
+    position: relative;
+    overflow: visible; /* que no se recorte lo flotante */
+  }
+  
+  .hero-bg-shape {
+    position: absolute;
+    border-radius: 999px;
+    filter: blur(60px);
+    opacity: 0.7;
+    z-index: 0;
+  }
+  
+  .hero-bg-shape-1 {
+    width: 380px;
+    height: 380px;
+    background: rgba(59, 130, 246, 0.65);
+    top: -80px;
+    right: -120px;
+  }
+  
+  .hero-bg-shape-2 {
+    width: 260px;
+    height: 260px;
+    background: rgba(255, 179, 71, 0.5);
+    bottom: -80px;
+    left: -80px;
+  }
+  
+  .hero-section .container {
+    position: relative;
+    z-index: 1;
+  }
+  
+  /* ----- HERO IMAGE ----- */
+  
+  .hero-image-wrap {
+    position: relative;
+    max-width: 460px;
+    margin-right: 2.5rem;
+  }
+  
+  .hero-image-main {
+    border-radius: 1.6rem;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 22px 50px rgba(0, 0, 0, 0.45);
+  }
+  
+  .hero-image-main img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .hero-info-card {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -12%;
+    width: 80%;
+    background: rgba(5, 15, 30, 0.92);
+    border-radius: 1rem;
+    padding: 0.85rem 1rem;
+    color: #e5e7eb;
+    font-size: 0.82rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 16px 35px rgba(0, 0, 0, 0.6);
+  }
+  
+  .hero-info-title {
+    font-weight: 600;
+  }
+  
+  .hero-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem;
+  }
+  
+  .hero-pills span {
+    padding: 0.1rem 0.55rem;
+    border-radius: 999px;
+    background-color: rgba(15, 118, 110, 0.2);
+    color: #a7f3d0;
+    font-size: 0.75rem;
+  }
+  
+  .hero-badge-floating {
+    position: absolute;
+    top: 10%;
+    right: -5%;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.35rem 0.7rem;
+    border-radius: 999px;
+    background: rgba(15, 23, 42, 0.92);
+    color: #e5e7eb;
+    font-size: 0.78rem;
+    border: 1px solid rgba(148, 163, 184, 0.4);
+  }
+  
+  .hero-badge-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 999px;
+    background-color: #22c55e;
+  }
+  
+  .hero-badge-count {
+    font-weight: 600;
+  }
+  
+  /* ----- HERO META ----- */
+  
+  .hero-meta-label {
+    display: inline-block;
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: #e5e7eb;
+  }
+  
+  .hero-meta-text {
+    font-size: 0.8rem;
+    color: rgba(226, 232, 240, 0.9);
+  }
+  
+ /* ----- QUIÉNES SOMOS ----- */
+
+/* ----- QUIÉNES SOMOS (estilo tipo InFocus) ----- */
+
+#quienes-somos {
+    scroll-margin-top: 150px;
+    padding: 5rem 0 4.5rem;
+    background: #ffffff;
+  }
+  
+  .about-intro {
+    max-width: 760px;
+    margin: 0 auto 3rem;
+  }
+  
+  .about-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .about-card {
+    background: #ffffff;
+    border-radius: 1.25rem;
+    padding: 1.6rem 1.5rem;
+    border: 1px solid rgba(15, 23, 42, 0.06);
+    box-shadow: 0 12px 32px rgba(15, 23, 42, 0.06);
+    display: flex;
+    flex-direction: column;
+    gap: 0.55rem;
+  }
+  
+  .about-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 16px 40px rgba(15, 23, 42, 0.08);
+    transition: all 0.18s ease-out;
+  }
+  
+  .about-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    background-color: rgba(11, 60, 93, 0.06);
+    margin-bottom: 0.3rem;
+  }
+  
+  .about-card-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--innova-primary);
+    margin-bottom: 0;
+  }
+  
+  .about-card-text {
+    font-size: 0.9rem;
+    color: #4b5563;
+    margin-bottom: 0;
+  }
+  
+  .about-tag-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem;
+    margin-top: 0.3rem;
+  }
+  
+  .about-tag-row span {
+    font-size: 0.78rem;
+    padding: 0.2rem 0.55rem;
+    border-radius: 999px;
+    background-color: #f3f4f6;
+    color: #111827;
+  }
+  
+  /* responsive */
+  
+  @media (max-width: 991.98px) {
+    .about-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+  
+  @media (max-width: 767.98px) {
+    #quienes-somos {
+      padding: 4rem 0 3.5rem;
+    }
+  
+    .about-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  .section-divider {
+    width: 100%;
+    height: 2px;
+    background: rgba(15, 39, 90, 0.18); /* azul suave */
+    margin: 4rem 0 3.5rem;
+  }
+  
+  .service-highlight {
+    border-radius: 1.75rem;
+    padding: 1.9rem 2rem;
+    background: #ffffff;
+    border: 1px solid rgba(15, 23, 42, 0.06);
+    box-shadow: 0 18px 45px rgba(15, 23, 42, 0.08);
+  }
+  
+  .service-highlight-media {
+    border-radius: 1.5rem;
+    overflow: hidden;
+    box-shadow: 0 14px 35px rgba(15, 23, 42, 0.18);
+  }
+  
+  .service-highlight-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .service-highlight-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  
+  .service-highlight-chip {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.2rem 0.7rem;
+    border-radius: 999px;
+    font-size: 0.78rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    background-color: rgba(11, 60, 93, 0.06);
+    color: var(--innova-primary);
+  }
+  
+  .service-highlight-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #111827;
+    margin-bottom: 0;
+  }
+  
+  .service-highlight-text {
+    font-size: 0.96rem;
+    color: #4b5563;
+    margin-bottom: 0.25rem;
+  }
+  
+  .service-highlight-list {
+    font-size: 0.92rem;
+    color: #374151;
+    padding-left: 1.1rem;
+  }
+  
+  /* Responsive */
+  
+  @media (max-width: 767.98px) {
+    .service-highlight {
+      padding: 1.5rem 1.3rem;
+    }
+  
+    .service-highlight-title {
+      font-size: 1.15rem;
+    }
+  }
+  
+  
