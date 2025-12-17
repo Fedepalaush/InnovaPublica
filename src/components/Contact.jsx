@@ -65,7 +65,7 @@ ${form.mensaje}
               <p className="mb-2">
                 📩 Correo institucional:{" "}
                 <span className="contact-email">
-                  contacto@innovapublica.com
+                  consultas@innovapublica.com
                 </span>
               </p>
               <p className="text-muted mb-0">
