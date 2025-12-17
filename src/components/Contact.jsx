@@ -15,10 +15,33 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Acá integrarías con tu backend, Formspree, EmailJS, etc.
-    console.log("Formulario enviado:", form);
-    alert("¡Gracias por tu mensaje! Nos pondremos en contacto.");
-    setForm({ nombre: "", institucion: "", email: "", mensaje: "" });
+
+    // WhatsApp: sin "+" ni espacios
+    const telefono = "5492901649941";
+
+    const texto = `Hola, buen día.
+
+Me comunico desde el sitio web de Innova Pública para realizar una consulta y conocer más sobre los servicios que ofrecen.
+
+Información de contacto:
+• ${form.nombre}
+• Correo electrónico: ${form.email}
+${form.institucion ? `• Institución: ${form.institucion}` : ""}
+
+Mensaje:
+${form.mensaje}
+`;
+
+    const url = `https://wa.me/${telefono}?text=${encodeURIComponent(texto)}`;
+    window.open(url, "_blank");
+
+    // Limpia el formulario luego de abrir WhatsApp
+    setForm({
+      nombre: "",
+      institucion: "",
+      email: "",
+      mensaje: "",
+    });
   };
 
   return (
@@ -28,9 +51,9 @@ const Contact = () => {
           <div className="col-lg-8 text-center">
             <h2 className="section-title mb-3">Contacto</h2>
             <p className="section-subtitle mx-auto">
-              En Innova Pública valoramos el trabajo colaborativo y la construcción de soluciones
-              estratégicas adaptadas a cada territorio. Si deseás iniciar un proyecto o conocer más
-              sobre nuestros servicios, estamos a disposición.
+              En Innova Pública valoramos el trabajo colaborativo y la construcción de
+              soluciones estratégicas adaptadas a cada territorio. Si deseás iniciar un
+              proyecto o conocer más sobre nuestros servicios, estamos a disposición.
             </p>
           </div>
         </div>
@@ -41,11 +64,13 @@ const Contact = () => {
               <h3 className="contact-title mb-3">Datos de contacto</h3>
               <p className="mb-2">
                 📩 Correo institucional:{" "}
-                <span className="contact-email">contacto@innovapublica.com</span>
+                <span className="contact-email">
+                  contacto@innovapublica.com
+                </span>
               </p>
               <p className="text-muted mb-0">
-                Podemos coordinar una reunión virtual para conocer el contexto de tu institución y
-                explorar líneas de trabajo en conjunto.
+                Podemos coordinar una reunión virtual para conocer el contexto de tu
+                institución y explorar posibles líneas de trabajo en conjunto.
               </p>
             </div>
           </div>
@@ -79,7 +104,7 @@ const Contact = () => {
                     name="institucion"
                     type="text"
                     className="form-control"
-                    placeholder="Organismo / institución"
+                    placeholder="Organismo / institución (opcional)"
                     value={form.institucion}
                     onChange={handleChange}
                   />
@@ -117,7 +142,10 @@ const Contact = () => {
                   />
                 </div>
 
-                <button type="submit" className="btn btn-primary rounded-pill px-4">
+                <button
+                  type="submit"
+                  className="btn btn-primary rounded-pill px-4"
+                >
                   Enviar consulta
                 </button>
               </form>
